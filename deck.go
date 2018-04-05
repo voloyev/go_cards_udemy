@@ -2,15 +2,15 @@ package main
 
 import "fmt"
 
-type deck []string 
+type deck []string
 
 func newDeck() deck {
 	cards := deck{}
-	cardSuits :=[]string{"Spades", "Diamonds", "Hearts", "Clubbe"}
-	cardValues :=[]string{"Ace", "Two", "Three", "Four"}
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubbe"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
-			cards = append(cards, value + " of " + suit)
+			cards = append(cards, value+" of "+suit)
 		}
 	}
 
@@ -18,7 +18,7 @@ func newDeck() deck {
 }
 
 func (d deck) print() {
-		for i, card := range d {
+	for i, card := range d {
 		fmt.Println(i, card)
 	}
 }
