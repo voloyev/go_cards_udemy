@@ -22,7 +22,7 @@ func TestNewDeck(t *testing.T) {
 	}
 }
 
-func TestSavetoDeckAndNewFromFile(t *testing.T) {
+func TestSavetoDeckAndNewDeckFromFile(t *testing.T) {
 	os.Remove("_decktesting")
 	deck := newDeck()
 	deck.saveToFile("_decktesting")
